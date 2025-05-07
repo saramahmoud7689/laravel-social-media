@@ -16,8 +16,7 @@
     <!--     // ['title', 'slug', 'body', 'version', 'image']; -->
     <div class="mb-3">
       <label for="title" class="form-label">Title</label>
-      <input type="text" class="form-control" name="title" 
-      value="{{old('title')}}">
+      <input type="text" class="form-control" name="title">
       @error('title')
           <div class="text-danger">{{ $message }}</div>
       @enderror
@@ -32,18 +31,24 @@
     </div>
     <div class="mb-3">
         <label class="form-label">Body</label>
-        <input type="text" class="form-control" name="body" value="{{old('body')}}">
+        <input type="text" class="form-control" name="body">
+        @error('body')
+          <div class="text-danger">{{ $message }}</div>
+        @enderror
     </div>
     <div class="mb-3">
         <label class="form-label">Image</label>
-        <input type="text" class="form-control" name="image" value="{{old('image')}}">
+        <input type="text" class="form-control" name="image">
+        @error('image')
+          <div class="text-danger">{{ $message }}</div>
+        @enderror
     </div>
     <div class="mb-3">
         <label class="form-label">Version</label>
-        <input type="text" class="form-control" name="version" value="{{old('version')}}">
+        <input type="text" class="form-control" name="version">
         @error('version')
           <div class="text-danger">{{ $message }}</div>
-      @enderror
+        @enderror
     </div>
    
     <button type="submit" class="btn btn-primary">Submit</button>

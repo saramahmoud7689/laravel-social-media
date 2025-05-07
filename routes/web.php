@@ -7,8 +7,9 @@ Route::get('/', function () {
 });
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 
-// Route::resource('posts', PostController::class);
+Route::resource('comments', CommentController::class);
 
 Route::get("/posts", [PostController::class, 'index'])->name("posts.index");
 
